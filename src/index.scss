@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #ccc;
+}
+
+:focus {
+  outline: none;
+}
+
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.device-container {
+  transition: 0.5s;
+
+  &.active {
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%) scale(150%);
+    z-index: 100;
+  }
+
+  .button {
+    position: absolute;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    top: 0;
+    left: 50%;
+    width: 4rem;
+    height: 4rem;
+    line-height: 0;
+    background: #22c55e;
+    transform: translate(-50%, 0);
+    border-radius: 50% 50% 0 0;
+    z-index: -1;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &.active {
+      display: none;
+
+      svg {
+        transform: rotate(225deg);
+      }
+    }
+  }
+
+  &:hover .button {
+    transform: translate(-50%, -100%);
+  }
+
+  &#tablet:hover,
+  &#phone:hover {
+    .button {
+      transform: translate(-100%, -50%);
+    }
+  }
+}
+
+#desktop {
+  &.active {
+    transform: translate(-50%, -35%) scale(200%);
+  }
+}
+
+#laptop {
+  &.active {
+    transform: translate(-50%, -50%) scale(300%);
+  }
+
+  .button {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+  }
+}
+
+#tablet {
+  &.active {
+    transform: translate(-50%, -50%) scale(300%);
+  }
+
+  .button {
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    border-radius: 50% 0 0 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+
+    &:hover {
+      transform: translate(-100%, -50%);
+    }
+  }
+}
+
+#phone {
+  margin-left: -5px;
+
+  &.active {
+    transform: translate(-50%, -50%) scale(500%);
+  }
+
+  .button {
+    font-size: 1rem;
+    top: 50%;
+    left: 0;
+    transform: translate(10%, -50%);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50% 0 0 50%;
+  }
+}
