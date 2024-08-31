@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "./static/css/main.e1b38dc2.css",
+    "main.js": "./static/js/main.da6cd8de.js",
+    "static/media/macbook-pro-14.png": "./static/media/macbook-pro-14.7876636ffc0bac114743.png",
+    "static/media/imac-24.png": "./static/media/imac-24.324f5a4f3412092f02bf.png",
+    "static/media/iphone-14-pro-max.png": "./static/media/iphone-14-pro-max.662b00b41ad6351e1f99.png",
+    "static/media/apple-ipad-pro-11.png": "./static/media/apple-ipad-pro-11.0a840cc35d6550b716d9.png",
+    "index.html": "./index.html",
+    "main.e1b38dc2.css.map": "./static/css/main.e1b38dc2.css.map",
+    "main.da6cd8de.js.map": "./static/js/main.da6cd8de.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e1b38dc2.css",
+    "static/js/main.da6cd8de.js"
+  ]
+}
